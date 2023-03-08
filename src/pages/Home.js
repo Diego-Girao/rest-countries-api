@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import ThumbDetails from "../components/ThumbDetails"
 
 function Home() {
 	const [countries, setCountries] = useState([])
@@ -58,7 +60,7 @@ function Home() {
 				</div>
 			</div>
 			<div className="flex container mx-auto mb-16">
-				<i class="fa fa-search my-auto -mr-9 z-10 pr-2 pl-3 py-5 rounded-md text-gray-400"></i>
+				<i className="fa fa-search my-auto -mr-9 z-10 pr-2 pl-3 py-5 rounded-md text-gray-400"></i>
 				<input
 					type="text"
 					placeholder="Search for a country..."
@@ -76,6 +78,19 @@ function Home() {
 					<option value="europe">Europe</option>
 					<option value="oceania">Oceania</option>
 				</select>
+			</div>
+			<div className="container grid grid-cols-4 gap-16 mx-auto">
+				{countries.map((country, index) => (
+					<Link to={{ pathname: "details", state: country }} key={index}>
+						<ThumbDetails
+							title={country.name}
+							image_url={country.flag}
+							population={country.population}
+							region={country.region}
+							capital={country.capital}
+						/>
+					</Link>
+				))}
 			</div>
 		</div>
 	)
