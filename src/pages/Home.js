@@ -65,7 +65,7 @@ function Home() {
 					type="text"
 					placeholder="Search for a country..."
 					className="pl-10 p-2 shadow-md rounded-md w-1/3 dark:bg-gray-700"
-					onChange={(term) => searchCountry(term.target.value)}
+					onChange={(event) => searchCountry(event.target.value)}
 				/>
 				<select
 					className="ml-auto my-2 p-2 shadow-md rounded-md font-medium dark:bg-gray-700"
@@ -83,7 +83,7 @@ function Home() {
 				{countries.map((country, index) => (
 					<Link to={{ pathname: "details", state: country }} key={index}>
 						<ThumbDetails
-							title={country.name}
+							title={country.name.official}
 							image_url={country.flag}
 							population={country.population}
 							region={country.region}
