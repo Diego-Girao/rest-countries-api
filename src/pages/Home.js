@@ -71,7 +71,7 @@ function Home() {
 					className="ml-auto my-2 p-2 shadow-md rounded-md font-medium dark:bg-gray-700"
 					onChange={(val) => filterByRegion(val.target.value)}
 				>
-					<option>Filter by Region</option>
+					<option value="">Filter by Region</option>
 					<option value="africa">Africa</option>
 					<option value="america">America</option>
 					<option value="asia">Asia</option>
