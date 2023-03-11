@@ -5,7 +5,7 @@ function ThumbDetails({ title, image_url, population, region, capital }) {
 		<div className="container rounded-lg shadow-lg bg-white dark:bg-gray-700 dark:text-white pb-4">
 			<img
 				src={image_url}
-				className="h-1/2 w-full rounded-tl-lg rounded-tr-lg"
+				className="h-1/4 w-full rounded-tl-lg rounded-tr-lg"
 				alt={title}
 			/>
 			<div className="p-4">
