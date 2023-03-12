@@ -1,12 +1,12 @@
 import React from "react"
 
-function ThumbDetails({ title, image_url, population, region, capital }) {
+function ThumbDetails({ title, image_url, alt, population, region, capital }) {
 	return (
-		<div className="container rounded-lg shadow-lg bg-white dark:bg-gray-700 dark:text-white pb-4">
+		<div className="container h-96 w-72 rounded-lg shadow-lg bg-white dark:bg-gray-700 dark:text-white pb-4">
 			<img
 				src={image_url}
-				className="h-1/4 w-full rounded-tl-lg rounded-tr-lg"
-				alt={title}
+				className="h-fit w-full rounded-tl-lg rounded-tr-lg"
+				alt={alt}
 			/>
 			<div className="p-4">
 				<h3 className="font-bold mb-4">{title}</h3>
