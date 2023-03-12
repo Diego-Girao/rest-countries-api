@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import ThumbDetails from "../components/ThumbDetails"
 
-function Home() {
+function Home(props) {
 	const [countries, setCountries] = useState([])
 	const [mode, setMode] = useState(true)
 	const [toggleBtn, setToggleBtn] = useState(
@@ -81,10 +81,11 @@ function Home() {
 			</div>
 			<div className="container grid desktop:grid-cols-4 tablet:grid-cols-2 tablet:place-items-center mobile:grid-cols-1 gap-16 mx-auto">
 				{countries.map((country, index) => (
-					<Link to={{ pathname: "details", state: country }} key={index}>
+					<Link to="details" state={country} key={index}>
 						<ThumbDetails
 							title={country.name.official}
 							image_url={country.flags.svg}
+							alt={country.flags.alt}
 							population={country.population}
 							region={country.region}
 							capital={country.capital}
