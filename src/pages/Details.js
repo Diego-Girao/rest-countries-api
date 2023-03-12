@@ -1,14 +1,16 @@
 import React, { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
-function Details() {
+function Details(props) {
 	const [mode, setMode] = useState(true)
 	const [toggleBtn, setToggleBtn] = useState(
 		'<i class="far fa-sun" ></i> Light Mode'
 	)
 
-	let { state } = useLocation()
-	console.log(state)
+	const location = useLocation()
+	const state = location.state
+
+	console.log(state.capital)
 
 	let navigate = useNavigate()
 	const backHomeBtn = () => {
@@ -49,62 +51,68 @@ function Details() {
 					<i className="fa fa-arrow-left"></i> Back
 				</button>
 			</div>
-			<div className="container flex mx-auto p-8 pl-0 pr-0">
-				<img src={state.flags} className="w-1/2 pr-8" alt={state.name} />
-				<div className="p-8 pl-0">
-					<h2 className="font-bold text-2xl mb-8">{state.name}</h2>
-					<div className="grid grid-cols-2 gap-x-20 gap-y-4">
-						<p>
-							Native name:{" "}
-							<span className="dark:text-gray-400 text-gray-700 text-sm">
-								{state.population}
-							</span>
-						</p>
-						<p>
-							Population:{" "}
-							<span className="dark:text-gray-400 text-gray-700 text-sm">
-								{state.population}
-							</span>
-						</p>
-						<p>
-							Region:{" "}
-							<span className="dark:text-gray-400 text-gray-700 text-sm">
-								{state.region}
-							</span>
-						</p>
-						<p>
-							Sub Region:{" "}
-							<span className="dark:text-gray-400 text-gray-700 text-sm">
-								{state.subregion}
-							</span>
-						</p>
-						<p>
-							Capital:{" "}
-							<span className="dark:text-gray-400 text-gray-700 text-sm">
-								{state.capital}
-							</span>
-						</p>
-						<p>
-							Top Level Domain:{" "}
-							<span className="dark:text-gray-400 text-gray-700 text-sm">
-								{state.topLevelDomain[0]}
-							</span>
-						</p>
-						<p>
-							Currencies:{" "}
-							<span className="dark:text-gray-400 text-gray-700 text-sm">
-								{state.currencies.map((cur) => cur.name)}
-							</span>
-						</p>
-						<p>
-							Languages:{" "}
-							<span className="dark:text-gray-400 text-gray-700 text-sm">
-								{state.languages.map((lang) => lang.name + ",")}
-							</span>
-						</p>
+			{state && (
+				<div className="container flex mx-auto p-8 pl-0 pr-0">
+					<img
+						src={state.flags.svg}
+						className="w-1/2 pr-8"
+						alt={state.flags.alt}
+					/>
+					<div className="p-8 pl-0">
+						<h2 className="font-bold text-2xl mb-8">{state.name.official}</h2>
+						<div className="grid grid-cols-2 gap-x-20 gap-y-4">
+							<p>
+								Native name:{" "}
+								<span className="dark:text-gray-400 text-gray-700 text-sm">
+									{state.name.common}
+								</span>
+							</p>
+							<p>
+								Population:{" "}
+								<span className="dark:text-gray-400 text-gray-700 text-sm">
+									{state.population}
+								</span>
+							</p>
+							<p>
+								Region:{" "}
+								<span className="dark:text-gray-400 text-gray-700 text-sm">
+									{state.region}
+								</span>
+							</p>
+							<p>
+								Sub Region:{" "}
+								<span className="dark:text-gray-400 text-gray-700 text-sm">
+									{state.subregion}
+								</span>
+							</p>
+							<p>
+								Capital:{" "}
+								<span className="dark:text-gray-400 text-gray-700 text-sm">
+									{state.capital + " "}
+								</span>
+							</p>
+							<p>
+								Top Level Domain:{" "}
+								<span className="dark:text-gray-400 text-gray-700 text-sm">
+									{state.tld}
+								</span>
+							</p>
+							<p>
+								Currencies:{" "}
+								<span className="dark:text-gray-400 text-gray-700 text-sm">
+									{state.currencies[0]}
+								</span>
+							</p>
+							<p>
+								Languages:{" "}
+								<span className="dark:text-gray-400 text-gray-700 text-sm">
+									{state.languages[0]}
+								</span>
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
+			)}
 		</div>
 	)
 }
