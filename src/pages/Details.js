@@ -50,14 +50,16 @@ function Details(props) {
 				</button>
 			</div>
 			{state && (
-				<div className="container flex mx-auto p-8 pl-0 pr-0 laptop:flex-row tablet:flex-row mobile:flex-col mobile:place-items-center">
+				<div className="container flex mx-auto p-8 pl-0 pr-0 desktop:mx-auto laptop:flex-row laptop:mx-5 tablet:flex-row mobile:flex-col mobile:place-items-center">
 					<img
 						src={state.flags.svg}
 						className="w-1/2 pr-8"
 						alt={state.flags.alt}
 					/>
 					<div className="p-8 pl-0">
-						<h2 className="font-bold text-2xl mb-8">{state.name.official}</h2>
+						<h2 className="font-bold text-2xl mb-8 laptop:text-2xl tablet:text-2xl mobile:text-xl">
+							{state.name.official}
+						</h2>
 						<div className="grid grid-cols-2 gap-x-20 gap-y-4 desktop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1">
 							<p>
 								Common name:{" "}
