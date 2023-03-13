@@ -50,7 +50,7 @@ function Details(props) {
 				</button>
 			</div>
 			{state && (
-				<div className="container flex mx-auto p-8 pl-0 pr-0">
+				<div className="container flex mx-auto p-8 pl-0 pr-0 laptop:flex-row tablet:flex-row mobile:flex-col mobile:place-items-center">
 					<img
 						src={state.flags.svg}
 						className="w-1/2 pr-8"
@@ -58,7 +58,7 @@ function Details(props) {
 					/>
 					<div className="p-8 pl-0">
 						<h2 className="font-bold text-2xl mb-8">{state.name.official}</h2>
-						<div className="grid grid-cols-2 gap-x-20 gap-y-4">
+						<div className="grid grid-cols-2 gap-x-20 gap-y-4 desktop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1">
 							<p>
 								Common name:{" "}
 								<span className="dark:text-gray-400 text-gray-700 text-sm">
