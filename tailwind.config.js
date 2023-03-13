@@ -4,14 +4,14 @@ module.exports = {
 	darkMode: "class",
 	theme: {
 		screens: {
+			mobile: "340px",
+			// => @media (min-width: 340px) { ... }
+
 			tablet: "600px",
 			// => @media (min-width: 600px) { ... }
 
 			laptop: "1024px",
 			// => @media (min-width: 1024px) { ... }
-
-			mobile: "340px",
-			// => @media (min-width: 340px) { ... }
 
 			desktop: "1280px",
 			// => @media (min-width: 1280px) { ... }
