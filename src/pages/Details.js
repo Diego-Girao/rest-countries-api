@@ -10,8 +10,6 @@ function Details(props) {
 	const location = useLocation()
 	const state = location.state
 
-	console.log(state.capital)
-
 	let navigate = useNavigate()
 	const backHomeBtn = () => {
 		navigate("/")
@@ -62,9 +60,9 @@ function Details(props) {
 						<h2 className="font-bold text-2xl mb-8">{state.name.official}</h2>
 						<div className="grid grid-cols-2 gap-x-20 gap-y-4">
 							<p>
-								Native name:{" "}
+								Common name:{" "}
 								<span className="dark:text-gray-400 text-gray-700 text-sm">
-									{state.name.common}
+									{state.name.common} {state.flag}
 								</span>
 							</p>
 							<p>
@@ -98,15 +96,22 @@ function Details(props) {
 								</span>
 							</p>
 							<p>
-								Currencies:{" "}
+								Demonyms:{" "}
 								<span className="dark:text-gray-400 text-gray-700 text-sm">
-									{state.currencies[0]}
+									{state.demonyms.eng.m}
 								</span>
 							</p>
 							<p>
-								Languages:{" "}
+								Maps:{" "}
 								<span className="dark:text-gray-400 text-gray-700 text-sm">
-									{state.languages[0]}
+									<a
+										className="hover:text-black"
+										href={state.maps.googleMaps}
+										target="_blank"
+										rel="noreferrer"
+									>
+										See {state.name.common} on Google Maps
+									</a>
 								</span>
 							</p>
 						</div>
