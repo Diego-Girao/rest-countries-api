@@ -49,21 +49,41 @@ Este foi o sexto projeto da mentoria **Conquiste Sua Vaga**, o projeto que escol
 
 - Utilizar a API [REST Countries API](https://restcountries.com/)
 
+- Ter um input de pesquisa
+
+- Ter a opção de filtrar por região
+
 - Ver o layout ideal para a interface, dependendo do tamanho da tela do dispositivo
 
 - Deixar o layout o mais próximo possível com o template do Desafio.
 
 <br>
 
-### **Screenshot - Desktop**
+### **Screenshot - Desktop - Light mode**
 
-<img width="800px" src="src/assets/prints/advice_desktop.png" alt="print da tela da versão desktop" />
+<img width="500px" src="https://user-images.githubusercontent.com/70491871/225145780-0d800654-c55b-488d-89c2-2b7b77d29585.png" />  <img width="500px" src="https://user-images.githubusercontent.com/70491871/225146380-5c5f6e96-846e-463c-88b1-eecea55743fd.png" />
+
+<img width="500px" src="https://user-images.githubusercontent.com/70491871/225146631-f069e212-3ef3-43f8-98a6-6ec7134153a3.png" />  <img width="500px" src="https://user-images.githubusercontent.com/70491871/225146854-9d64da87-c81e-4d94-bf22-3c650afd49b7.png" />
+
+  
+  
+### **Screenshot - Desktop - Dark mode**
+
+<img width="500px" src="https://user-images.githubusercontent.com/70491871/225152461-aadca337-e51c-427d-b491-11b443c90671.png" /> <img width="500px" src="https://user-images.githubusercontent.com/70491871/225152640-a9a6f7ca-9a9b-4fa3-baf4-3fd3bc2f4513.png" />
+
+<img width="500px" src="https://user-images.githubusercontent.com/70491871/225152723-00bc752c-75e3-4ced-a038-5f3637164353.png" /> <img width="500px" src="https://user-images.githubusercontent.com/70491871/225152821-7634dc06-d104-4e2a-8d5b-96c332a917ca.png" />
+
 
 <br>
 
-### **Screenshot - Mobile**
 
-<img width="320px" src="src/assets/prints/advice_mobile.png" alt="print da tela da versão mobile" />
+### **Screenshot - Mobile - Light | Dark mode**
+
+<img width="320px" src="https://user-images.githubusercontent.com/70491871/225159241-f98db004-39e2-46a7-a32a-b2353af5fa80.png" /> <img width="320px" src="https://user-images.githubusercontent.com/70491871/225159363-de9a0c1b-3758-484e-95cf-089a91b23316.png" /> 
+
+<img width="320px" src="https://user-images.githubusercontent.com/70491871/225159573-680bd55e-4043-4d5e-bbf9-ef75a7b74735.png" /> <img width="320px" src="https://user-images.githubusercontent.com/70491871/225159638-bb404fe2-3d9b-4f64-bded-04b3c65addcf.png" /> 
+
+<img width="320px" src="https://user-images.githubusercontent.com/70491871/225160153-783b482d-8c31-4d7d-817a-57edd9120c42.png" />
 
 <br>
 
