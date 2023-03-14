@@ -5,7 +5,11 @@
 
 # REST Countries API with color theme switcher - Frontend Mentor
 
-[src_assets_prints_advice.webm](https://user-images.githubusercontent.com/70491871/223278680-2571bcd0-e90e-4280-97e6-3a7ca3e73710.webm)
+![light_mode](https://user-images.githubusercontent.com/70491871/225033183-39282a15-323e-4bf1-ba2c-6fcb3c99aea7.png)
+
+![dark_mode](https://user-images.githubusercontent.com/70491871/225033398-80c10e5a-5a5a-4043-b44d-b964921edffd.png)
+
+
 
 </div>
 
