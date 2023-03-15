@@ -109,7 +109,7 @@ Este foi o sexto projeto da mentoria **Conquiste Sua Vaga**, o projeto que escol
 
 ### O que aprendi
 
-- Refatorar o código para que ele ficasse menor, mais fácil de enter e optei por utilizar po fetch, evitando assim instalar uma lib para consumo de uma API, para fixar melhor o fetch.
+- Refatorar o código para que ele ficasse menor, mais fácil de enter e optei por utilizar o fetch, evitando assim instalar uma lib para consumo de uma API além disso uma forma de fixar melhor o entendimento do consumo de API pelo fetch.
 
 - Aplicar o conceito de que menos é mais e que nem sempre precisamos componentizar tudo, criando apenas 1 componente e 1 page, optei dessa forma pois queria deixar aberto a opção de poder refatorar o código e componentizar o que fosse possível. Assim fixaria mais o processo de refatoração, componentização e controle do git com novas branchs, pull requests e merge.
 
