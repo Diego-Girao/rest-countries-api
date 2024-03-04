@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
 function Details(props) {
-	const [mode, setMode] = useState(true)
+	const [mode, setMode] = useState(false)
 	const [toggleBtn, setToggleBtn] = useState(
-		'<i class="far fa-sun" ></i> Light Mode'
+		'<i class="fa-regular fa-lightbulb"></i> Light Mode'
 	)
 
 	const location = useLocation()
@@ -18,12 +18,12 @@ function Details(props) {
 	const toggleDarkMode = () => {
 		if (mode) {
 			document.documentElement.classList.add("dark")
-			setToggleBtn('<i class="far fa-moon"></i> Dark Mode')
+			setToggleBtn('<i class="fa-solid fa-lightbulb"></i> Dark Mode')
 			setMode((current) => (current = !current))
 		}
 		if (!mode) {
 			document.documentElement.classList.remove("dark")
-			setToggleBtn('<i class="far fa-sun"></i> Light Mode')
+			setToggleBtn('<i class="fa-regular fa-lightbulb"></i> Light Mode')
 			setMode((current) => (current = !current))
 		}
 	}
