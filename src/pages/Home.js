@@ -79,16 +79,16 @@ function Home(props) {
 					<option value="oceania">Oceania</option>
 				</select>
 			</div>
-			<div className="container grid gap-16 mx-auto desktop:grid-cols-4 tablet:grid-cols-2 tablet:place-items-center mobile:grid-cols-1 mobile:place-items-center">
+			<div className="grid gap-16 container mx-auto desktop:grid-cols-4 desktop:gap-4 tablet:grid-cols-2 tablet:place-items-center mobile:grid-cols-1 mobile:place-items-center">
 				{countries.map((country, index) => (
 					<Link to="details" state={country} key={index}>
 						<ThumbDetails
-							title={country.name.official}
-							image_url={country.flags.svg}
-							alt={country.flags.alt}
-							population={country.population}
-							region={country.region}
-							capital={country.capital}
+							title={country.name?.official || "No official name"}
+							image_url={country.flags?.svg || ""}
+							alt={country.flags?.alt || ""}
+							population={country.population || ""}
+							region={country.region || ""}
+							capital={country.capital || ""}
 						/>
 					</Link>
 				))}
