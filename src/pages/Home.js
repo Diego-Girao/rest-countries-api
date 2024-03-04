@@ -62,7 +62,7 @@ function Home(props) {
 			<div className="flex container mx-auto mb-16">
 				<i className="fa fa-search my-auto -mr-9 z-10 pr-2 pl-3 py-5 rounded-md text-gray-400"></i>
 				<input
-					type="text"
+					type="search"
 					placeholder="Search for a country..."
 					className="pl-10 p-2 shadow-md rounded-md w-1/3 dark:bg-gray-700"
 					onChange={(event) => searchCountry(event.target.value)}
