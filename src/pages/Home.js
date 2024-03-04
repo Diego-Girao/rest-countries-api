@@ -6,7 +6,7 @@ function Home(props) {
 	const [countries, setCountries] = useState([])
 	const [mode, setMode] = useState(true)
 	const [toggleBtn, setToggleBtn] = useState(
-		'<i class="far fa-sun" ></i> Light Mode'
+		'<i class="fa-regular fa-lightbulb"></i> Light Mode'
 	)
 
 	useEffect(() => {
@@ -22,12 +22,12 @@ function Home(props) {
 	const toggleDarkMode = () => {
 		if (mode) {
 			document.documentElement.classList.add("dark")
-			setToggleBtn('<i class="far fa-moon"></i> Dark Mode')
+			setToggleBtn('<i class="fa-solid fa-lightbulb"></i> Dark Mode')
 			setMode((current) => (current = !current))
 		}
 		if (!mode) {
 			document.documentElement.classList.remove("dark")
-			setToggleBtn('<i class="far fa-sun"></i> Light Mode')
+			setToggleBtn('<i class="fa-regular fa-lightbulb"></i> Light Mode')
 			setMode((current) => (current = !current))
 		}
 	}
