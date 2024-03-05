@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 function Details(props) {
 	const [mode, setMode] = useState(true)
 	const [toggleBtn, setToggleBtn] = useState(
-		'<i class="far fa-sun" ></i> Light Mode'
+		'<i class="fa-regular fa-lightbulb"></i> Light Mode'
 	)
 
 	const location = useLocation()
@@ -18,12 +18,12 @@ function Details(props) {
 	const toggleDarkMode = () => {
 		if (mode) {
 			document.documentElement.classList.add("dark")
-			setToggleBtn('<i class="far fa-moon"></i> Dark Mode')
+			setToggleBtn('<i class="fa-solid fa-lightbulb"></i> Dark Mode')
 			setMode((current) => (current = !current))
 		}
 		if (!mode) {
 			document.documentElement.classList.remove("dark")
-			setToggleBtn('<i class="far fa-sun"></i> Light Mode')
+			setToggleBtn('<i class="fa-regular fa-lightbulb"></i> Light Mode')
 			setMode((current) => (current = !current))
 		}
 	}
@@ -41,12 +41,12 @@ function Details(props) {
 					</div>
 				</div>
 			</div>
-			<div className="container mx-auto mb-16">
+			<div className="container mx-auto mb-2">
 				<button
-					className="px-8 py-2 bg-white text-gray-600 shadow-md rounded-lg dark:bg-gray-700 dark:text-white"
+					className="px-8 py-2 bg-white text-gray-600 shadow-md rounded-lg dark:bg-gray-700 dark:text-white hover:text-black hover:shadow-lg hover:shadow-gray-500 dark:hover:shadow-gray-500 dark:hover:shadow-md dark:hover:text-sky-200 ease-in-out duration-300"
 					onClick={backHomeBtn}
 				>
-					<i className="fa fa-arrow-left"></i> Back
+					<i className="fa fa-arrow-left mr-2"></i>Back
 				</button>
 			</div>
 			{state && (
@@ -70,7 +70,7 @@ function Details(props) {
 							<p>
 								Population:{" "}
 								<span className="dark:text-gray-400 text-gray-700 text-sm">
-									{state.population}
+									{state.population.toLocaleString()}
 								</span>
 							</p>
 							<p>
@@ -105,9 +105,9 @@ function Details(props) {
 							</p>
 							<p>
 								Maps:{" "}
-								<span className="dark:text-gray-400 text-gray-700 text-sm">
+								<span className="dark:text-sky-400 text-sky-600 text-sm">
 									<a
-										className="hover:text-black"
+										className="hover:text-blue-700"
 										href={state.maps.googleMaps}
 										target="_blank"
 										rel="noreferrer"
