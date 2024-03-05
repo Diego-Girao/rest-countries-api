@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
 function Details(props) {
-	const [mode, setMode] = useState(false)
+	const [mode, setMode] = useState(true)
 	const [toggleBtn, setToggleBtn] = useState(
 		'<i class="fa-regular fa-lightbulb"></i> Light Mode'
 	)
@@ -105,9 +105,9 @@ function Details(props) {
 							</p>
 							<p>
 								Maps:{" "}
-								<span className="dark:text-gray-400 text-gray-700 text-sm">
+								<span className="dark:text-sky-400 text-sky-600 text-sm">
 									<a
-										className="hover:text-black"
+										className="hover:text-blue-700"
 										href={state.maps.googleMaps}
 										target="_blank"
 										rel="noreferrer"
