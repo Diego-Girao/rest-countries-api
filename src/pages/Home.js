@@ -33,8 +33,11 @@ function Home(props) {
 	}
 
 	const searchCountry = async (term) => {
-		if (term.length < 3 || term === "") return
-		const res = await fetch(`https://restcountries.com/v3.1/name/${term}`)
+		let url = "https://restcountries.com/v3.1/all"
+		if (term.length >= 3) {
+			url = `https://restcountries.com/v3.1/name/${term}`
+		}
+		const res = await fetch(url)
 		const data = await res.json()
 		setCountries(data)
 	}
