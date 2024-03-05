@@ -36,14 +36,17 @@ function Home(props) {
 		if (term.length < 3 || term === "") return
 		const res = await fetch(`https://restcountries.com/v3.1/name/${term}`)
 		const data = await res.json()
-		await setCountries(data)
+		setCountries(data)
 	}
 
 	const filterByRegion = async (region) => {
-		if (region === "") return
-		const res = await fetch(`https://restcountries.com/v3.1/region/${region}`)
+		let url = "https://restcountries.com/v3.1/all"
+		if (region !== "") {
+			url = `https://restcountries.com/v3.1/region/${region}`
+		}
+		const res = await fetch(url)
 		const data = await res.json()
-		await setCountries(data)
+		setCountries(data)
 	}
 
 	return (
