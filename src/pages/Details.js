@@ -43,7 +43,7 @@ function Details(props) {
 			</div>
 			<div className="container mx-auto mb-2">
 				<button
-					className="px-8 py-2 bg-white text-gray-600 shadow-md rounded-lg dark:bg-gray-700 dark:text-white hover:text-black hover:shadow-lg hover:shadow-gray-500 ease-in-out duration-300"
+					className="px-8 py-2 bg-white text-gray-600 shadow-md rounded-lg dark:bg-gray-700 dark:text-white hover:text-black hover:shadow-lg hover:shadow-gray-500 dark:hover:shadow-gray-500 dark:hover:shadow-md dark:hover:text-sky-200 ease-in-out duration-300"
 					onClick={backHomeBtn}
 				>
 					<i className="fa fa-arrow-left mr-2"></i>Back
