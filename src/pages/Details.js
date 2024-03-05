@@ -41,7 +41,7 @@ function Details(props) {
 					</div>
 				</div>
 			</div>
-			<div className="container mx-auto mb-16">
+			<div className="container mx-auto mb-2">
 				<button
 					className="px-8 py-2 bg-white text-gray-600 shadow-md rounded-lg dark:bg-gray-700 dark:text-white"
 					onClick={backHomeBtn}
