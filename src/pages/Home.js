@@ -16,7 +16,7 @@ function Home(props) {
 	const getCountries = async () => {
 		const res = await fetch("https://restcountries.com/v3.1/all")
 		const data = await res.json()
-		await setCountries(data)
+		setCountries(data)
 	}
 
 	const toggleDarkMode = () => {
@@ -92,7 +92,7 @@ function Home(props) {
 							title={country.name?.official || "No official name"}
 							image_url={country.flags?.svg || ""}
 							alt={country.flags?.alt || ""}
-							population={country.population || ""}
+							population={country.population.toLocaleString() || ""}
 							region={country.region || ""}
 							capital={country.capital || ""}
 						/>

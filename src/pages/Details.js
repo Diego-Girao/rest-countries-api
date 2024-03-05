@@ -70,7 +70,7 @@ function Details(props) {
 							<p>
 								Population:{" "}
 								<span className="dark:text-gray-400 text-gray-700 text-sm">
-									{state.population}
+									{state.population.toLocaleString()}
 								</span>
 							</p>
 							<p>
