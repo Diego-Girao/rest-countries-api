@@ -68,7 +68,7 @@ function Home(props) {
 					onChange={(event) => searchCountry(event.target.value)}
 				/>
 				<select
-					className="ml-auto my-2 p-2 shadow-md rounded-md font-medium dark:bg-gray-700"
+					className="ml-auto my-2 p-2 shadow-md rounded-md font-medium cursor-pointer dark:bg-gray-700"
 					onChange={(val) => filterByRegion(val.target.value)}
 				>
 					<option value="">Filter by Region</option>
