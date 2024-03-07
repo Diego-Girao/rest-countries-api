@@ -1,12 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
 function Details(props) {
-	const [mode, setMode] = useState(true)
-	const [toggleBtn, setToggleBtn] = useState(
-		'<i class="fa-regular fa-lightbulb"></i> Light Mode'
-	)
-
 	const location = useLocation()
 	const state = location.state
 
@@ -15,32 +10,8 @@ function Details(props) {
 		navigate("/")
 	}
 
-	const toggleDarkMode = () => {
-		if (mode) {
-			document.documentElement.classList.add("dark")
-			setToggleBtn('<i class="fa-solid fa-lightbulb"></i> Dark Mode')
-			setMode((current) => (current = !current))
-		}
-		if (!mode) {
-			document.documentElement.classList.remove("dark")
-			setToggleBtn('<i class="fa-regular fa-lightbulb"></i> Light Mode')
-			setMode((current) => (current = !current))
-		}
-	}
-
 	return (
 		<div className="bg-gray-100 dark:bg-gray-800 dark:text-white">
-			<div className="w-full shadow-md py-6 px-3 bg-white dark:bg-gray-700 dark:text-white mb-16">
-				<div className="flex container mx-auto">
-					<h1 className="font-bold text-xl">Where in the World ? 🤔</h1>
-					<div className="ml-auto font-medium">
-						<button
-							onClick={() => toggleDarkMode()}
-							dangerouslySetInnerHTML={{ __html: toggleBtn }}
-						></button>
-					</div>
-				</div>
-			</div>
 			<div className="container mx-auto mb-2">
 				<button
 					className="px-8 py-2 bg-white text-gray-600 shadow-md rounded-lg dark:bg-gray-700 dark:text-white hover:text-black hover:shadow-lg hover:shadow-gray-500 dark:hover:shadow-gray-500 dark:hover:shadow-md dark:hover:text-sky-200 ease-in-out duration-300"
