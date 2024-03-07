@@ -53,7 +53,7 @@ function Details(props) {
 				<div className="container flex mx-auto p-8 pl-0 pr-0 desktop:mx-auto laptop:flex-row laptop:mx-5 tablet:flex-row mobile:flex-col mobile:place-items-center">
 					<img
 						src={state.flags.svg}
-						className="w-1/2 pr-8"
+						className="h-auto pr-8 desktop:w-1/2 laptop:w-3/4 tablet:w-2/5"
 						alt={state.flags.alt}
 					/>
 					<div className="p-8 pl-0">
