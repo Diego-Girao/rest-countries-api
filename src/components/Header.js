@@ -21,7 +21,9 @@ function Header() {
 	return (
 		<div className="w-full shadow-md py-6 px-3 bg-white dark:bg-gray-700 dark:text-white mb-16">
 			<div className="flex container mx-auto">
-				<h1 className="font-bold text-xl">Where in the World ? 🤔</h1>
+				<h1 className="font-bold text-base tablet:text-xl">
+					Where in the World ? 🤔
+				</h1>
 				<div className="ml-auto font-medium">
 					<button
 						onClick={() => toggleDarkMode()}
