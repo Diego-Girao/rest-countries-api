@@ -37,7 +37,7 @@ function Home(props) {
 
 	return (
 		<div className="bg-gray-100 dark:bg-gray-800 dark:text-white">
-			<div className="flex flex-col md:flex-row md:justify-between container mx-auto mb-4">
+			<div className="container gap-4 flex flex-col md:flex-row md:justify-between">
 				<i className="fa fa-search top-3 left-2 relative z-10 rounded-md text-gray-400"></i>
 				<input
 					type="search"
@@ -46,7 +46,7 @@ function Home(props) {
 					onChange={(event) => searchCountry(event.target.value)}
 				/>
 				<select
-					className="my-8 p-2 shadow-md rounded-md font-medium cursor-pointer dark:bg-gray-700"
+					className="my-8 p-2 w-1/2 md:w-fit shadow-md rounded-md font-medium cursor-pointer dark:bg-gray-700"
 					onChange={(val) => filterByRegion(val.target.value)}
 				>
 					<option className="text-xs md:text-base" value="">
