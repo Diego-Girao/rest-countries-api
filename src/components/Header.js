@@ -19,7 +19,7 @@ function Header() {
 		}
 	}
 	return (
-		<div className="w-full shadow-md py-6 px-3 mb-8 bg-white dark:bg-gray-700 dark:text-white">
+		<div className="w-full shadow-md py-6 px-3 mb-8 bg-white dark:bg-gray-700 dark:text-white transition duration-300 ease-in-out">
 			<div className="flex container mx-auto">
 				<h1 className="font-bold text-base md:text-xl">
 					Where in the World ? 🤔
