@@ -2,7 +2,7 @@ import React from "react"
 
 function ThumbDetails({ title, image_url, alt, population, region, capital }) {
 	return (
-		<div className="h-96 w-96 rounded-lg shadow-lg bg-white dark:bg-gray-700 dark:text-white pb-4">
+		<div className="h-96 w-96 md:w-full rounded-lg shadow-lg bg-white dark:bg-gray-700 dark:text-white pb-4">
 			<img
 				src={image_url}
 				className="h-1/2 w-full object-cover rounded-tl-lg rounded-tr-lg"
