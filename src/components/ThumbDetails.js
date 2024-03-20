@@ -9,7 +9,7 @@ function ThumbDetails({ title, image_url, alt, population, region, capital }) {
 				alt={alt}
 			/>
 			<div className="p-4">
-				<h3 className="font-bold mb-4 text-2xl">{title}</h3>
+				<h3 className="font-bold mb-4 text-2xl truncate">{title}</h3>
 				<p className="text-xl">
 					Population:{" "}
 					<span className="text-gray-700 dark:text-gray-300">{population}</span>
