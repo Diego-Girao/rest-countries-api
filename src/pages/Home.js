@@ -37,7 +37,7 @@ function Home(props) {
 
 	return (
 		<div className="container mx-auto w-fit bg-gray-100 dark:bg-gray-800 dark:text-white">
-			<div className="container gap-4 flex flex-col md:flex-row md:justify-between mx-auto">
+			<div className="container gap-4 flex flex-col md:flex-row md:justify-between mx-auto md:px-4">
 				<i className="fa fa-search top-3 left-2 relative z-10 rounded-md text-gray-400"></i>
 				<input
 					type="search"
@@ -69,7 +69,7 @@ function Home(props) {
 					</option>
 				</select>
 			</div>
-			<div className="grid gap-16 2xl:grid-cols-4 2xl:gap-x-40 xl:grid-cols-3 md:grid-cols-2">
+			<div className="grid gap-16 2xl:grid-cols-4 2xl:gap-x-40 xl:grid-cols-3 md:grid-cols-2 md:px-4">
 				{countries.map((country, index) => (
 					<Link to="details" state={country} key={index}>
 						<ThumbDetails
